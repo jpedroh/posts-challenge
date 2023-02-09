@@ -5,6 +5,6 @@ import { RouterModule } from '@angular/router';
   selector: 'posts-challenge-root',
   standalone: true,
   imports: [RouterModule],
-  template: '<router-outlet></router-outlet>',
+  template: '<div class="container p-4"><router-outlet></router-outlet></div>',
 })
 export class AppComponent {}
