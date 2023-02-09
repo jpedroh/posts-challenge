@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@posts-challenge/posts/core": ["libs/posts/core/src/index.ts"],
+      "@posts-challenge/posts/posts-list": [
+        "libs/posts/posts-list/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

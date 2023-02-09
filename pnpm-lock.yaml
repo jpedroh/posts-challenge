@@ -40,6 +40,7 @@ specifiers:
   ts-node: 10.9.1
   tslib: ^2.3.0
   typescript: ~4.8.2
+  zod: ^3.20.6
   zone.js: ~0.11.4
 
 dependencies:
@@ -54,6 +55,7 @@ dependencies:
   '@nrwl/angular': 15.6.3_vmkrgf773xa2xxdbyrapzzehnu
   rxjs: 7.5.7
   tslib: 2.5.0
+  zod: 3.20.6
   zone.js: 0.11.8
 
 devDependencies:
@@ -10607,6 +10609,10 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  /zod/3.20.6:
+    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
+    dev: false
 
   /zone.js/0.11.8:
     resolution: {integrity: sha512-82bctBg2hKcEJ21humWIkXRlLBBmrc3nN7DFh5LGGhcyycO2S7FN8NmdvlcKaGFDNVL4/9kFLmwmInTavdJERA==}
