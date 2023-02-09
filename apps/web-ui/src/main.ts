@@ -11,6 +11,13 @@ export const ROUTES: Route[] = [
       return mod.PostsListContainerComponent;
     },
   },
+  {
+    path: 'posts/:postId',
+    loadComponent: async () => {
+      const mod = await import('@posts-challenge/posts/post-display');
+      return mod.PostDisplayContainerComponent;
+    },
+  },
 ];
 
 bootstrapApplication(AppComponent, {

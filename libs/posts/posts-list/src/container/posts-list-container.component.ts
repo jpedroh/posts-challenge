@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Post } from '@posts-challenge/posts/core';
 import { PostsListFacade } from '../services/posts-list.facade';
 import { PostsListService } from '../services/posts-list.service';
 
 @Component({
   selector: 'posts-challenge-posts-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, RouterModule],
   providers: [PostsListService, PostsListFacade],
   templateUrl: './posts-list-container.component.html',
   styleUrls: ['./posts-list-container.component.css'],
@@ -17,4 +19,8 @@ export class PostsListContainerComponent {
   readonly posts$ = this.facade.posts$;
 
   constructor(private readonly facade: PostsListFacade) {}
+
+  getPostLink(post: Post) {
+    return ['/posts', post.id];
+  }
 }
