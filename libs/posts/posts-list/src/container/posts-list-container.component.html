@@ -1,6 +1,15 @@
-<a [routerLink]="getPostLink(post)" *ngFor="let post of posts$ | async">
-  <div class="card">
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.body }}</p>
-  </div>
-</a>
+<ng-container *ngIf="posts$ | async as posts">
+  <a [routerLink]="getPostLink(post)" *ngFor="let post of posts | paginate : { itemsPerPage: 5, currentPage: currentPage, totalItems: posts.length }">
+      <div class="card">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.body }}</p>
+      </div>
+  </a>
+
+  <pagination-controls
+    (pageChange)="pageChanged($event)"
+    (pageBoundsCorrection)="pageChanged($event)"
+    [maxSize]="9"
+    [responsive]="true"
+  ></pagination-controls>
+</ng-container>
