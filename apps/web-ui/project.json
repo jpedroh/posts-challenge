@@ -9,6 +9,8 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "baseHref": "/posts-challenge/",
+        "deployUrl": "/posts-challenge/",
         "outputPath": "dist/apps/web-ui",
         "index": "apps/web-ui/src/index.html",
         "main": "apps/web-ui/src/main.ts",
