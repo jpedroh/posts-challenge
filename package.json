@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve": "nx run web-ui:serve"
+    "serve": "nx run web-ui:serve",
+    "build": "nx run web-ui:build"
   },
   "private": true,
   "dependencies": {
