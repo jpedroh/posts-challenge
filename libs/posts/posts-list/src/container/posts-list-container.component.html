@@ -1,4 +1,11 @@
 <div class="posts-list-container">
+  <form (submit)="onSearch($event)">
+    <div class="input-group mb-3">
+      <input required type="text" class="form-control" placeholder="Digite um título" aria-label="Digite um título" aria-describedby="searchBtn" [formControl]="searchControl">
+      <button class="btn btn-primary" id="searchBtn">Buscar por título</button>
+    </div>
+  </form>
+
   <ng-container *ngIf="posts$ | async as posts">
     <div class="card" *ngFor="let post of posts | paginate : { itemsPerPage: 5, currentPage: currentPage, totalItems: posts.length }">
       <div class="card-body">

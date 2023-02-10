@@ -12,6 +12,13 @@ export const ROUTES: Route[] = [
     },
   },
   {
+    path: 'posts/search',
+    loadComponent: async () => {
+      const mod = await import('@posts-challenge/posts/post-search');
+      return mod.PostSearchContainerComponent;
+    },
+  },
+  {
     path: 'posts/:postId',
     loadComponent: async () => {
       const mod = await import('@posts-challenge/posts/post-display');

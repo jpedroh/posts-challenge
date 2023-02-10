@@ -1,0 +1,17 @@
+<p *ngIf="isLoading$ | async">Carregando...</p>
+
+<div *ngIf="post$ | async as post; else notFound">
+  <h1>{{ post.title }}</h1>
+  <hr />
+  <p>{{ post.body }}</p>
+</div>
+
+<ng-template #notFound>
+  <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(isLoading$ | async) === false"
+  >
+    Post não encontrado
+  </div>
+</ng-template>

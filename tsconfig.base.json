@@ -19,6 +19,9 @@
       "@posts-challenge/posts/post-display": [
         "libs/posts/post-display/src/index.ts"
       ],
+      "@posts-challenge/posts/post-search": [
+        "libs/posts/post-search/src/index.ts"
+      ],
       "@posts-challenge/posts/posts-list": [
         "libs/posts/posts-list/src/index.ts"
       ]
