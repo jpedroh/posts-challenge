@@ -15,10 +15,8 @@ import { PostDisplayService } from '../services/post-display.service';
   styleUrls: ['./post-display-container.component.css'],
 })
 export class PostDisplayContainerComponent implements OnInit {
-  private readonly post$ = this.facade.post$;
-
-  readonly title$ = this.post$.pipe(map((post) => (post ? post.title : '')));
-  readonly body$ = this.post$.pipe(map((post) => (post ? post.body : '')));
+  readonly post$ = this.facade.post$;
+  readonly isLoading$ = this.facade.isLoading$;
 
   constructor(
     private readonly facade: PostDisplayFacade,

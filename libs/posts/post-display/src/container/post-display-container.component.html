@@ -1,2 +1,7 @@
-<h1>{{ title$ | async }}</h1><hr>
-<p>{{ body$ | async }}</p>
+<p *ngIf="isLoading$ | async">Carregando...</p>
+
+<div *ngIf="post$ | async as post">
+  <h1>{{ post.title }}</h1>
+  <hr />
+  <p>{{ post.body }}</p>
+</div>
